@@ -53,7 +53,7 @@ export const Post = (props: Props) => {
 
             await deleteDoc(likeToDelete)
             if (user) {
-                setLikes((prev)=> prev && prev.filter((like) => like.likeId !== likeId))
+                setLikes((prev)=> prev && prev.filter((like) => like.likeId === likeId))
             }
         } catch (error) {
             console.log(error)
